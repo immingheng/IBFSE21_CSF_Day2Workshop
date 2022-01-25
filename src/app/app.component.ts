@@ -25,7 +25,7 @@ export class AppComponent {
   }
 
   removeItem(product: Item){
-    product.quantity-=1;
+    product.quantity=0;
     this.cartL.push(product);
   }
 
