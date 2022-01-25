@@ -1,0 +1,9 @@
+<div class="flex-container">
+  <div>
+   <app-inventory (newItemEvent)="addItem($event)">Inventory</app-inventory>
+  </div>
+
+  <div class="flex-child">
+   <app-cart (newEvent)="removeItem($event)">Cart</app-cart>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div>
+<h1><b>Please Select</b></h1>
+<table>
+  <tr *ngFor="let item of inventoryList">
+    <td width="50px">
+      <span><img src="{{item.thumbnail}}" width="20em" height="20em"/></span>
+    </td>
+    <td width="80px">
+      <span>{{item.name}}</span>
+    </td>
+    <td width="20px">
+      <span><button (click)="addNewItem(item)">Add</button></span>
+    </td>
+  </tr>
+</table>
+</div>

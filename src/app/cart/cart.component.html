@@ -1,0 +1,24 @@
+<div>
+  <h1>My Cart</h1>
+  <div *ngIf="cartList.length <=0">
+    Your cart is empty.
+  </div>
+  <div *ngIf="cartList.length>0">
+    <table>
+      <tr *ngFor="let item of inventoryList">
+        <td width="30px">
+          <span><img src="{{item.thumbnail}}" width="20em" height="20em"/></span>
+        </td>
+        <td width="50px">
+          <span>{{item.name}}</span>
+        </td>
+        <td width="20px">
+          <span>QTY:{{item.quantity}}</span>
+        </td>
+        <td width="20px">
+          <button (click)="removeItem(item)">Remove</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
